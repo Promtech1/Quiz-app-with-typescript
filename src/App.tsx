@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { fetchQuizQuestions } from './API';
 import QuestionCard from './components/QuestionCard';
+import { useParams } from 'react-router-dom';
 
 //Typees
-import { QuestionState, Difficulty } from './API';
+// import { QuestionState, Difficulty } from './API';
+import { QuestionState } from './API';
 
 //styles
 import { GlobalStyle, Wrapper } from './App.styles';
@@ -26,12 +28,15 @@ const App = () => {
   const [gameOver, setGameOver] = useState(true)
 
   console.log(questions)
-
+  
+  const { difficulty } = useParams<{ difficulty: string }>();
 
   const startTrivia = async () => {
     setLoading(true)
 
-    const newQuestions = await fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY);
+    
+    
+    const newQuestions = await fetchQuizQuestions(TOTAL_QUESTIONS, difficulty);
 
     setQuestions(newQuestions);
     setScore(0);
@@ -84,6 +89,7 @@ const App = () => {
       
       <Wrapper>
         <h1>REACT QUIZ</h1>
+        <p className="level">Difficulty : {difficulty}</p>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className='start' onClick={startTrivia}>
             Start

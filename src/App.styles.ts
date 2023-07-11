@@ -8,8 +8,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background-image: url(${BGImage});
-        background-size: cover;
+        /* background-image: url(${BGImage});
+        background-size: cover; */
+        background-color: black;
         margin: 0;
         padding: 0;
         display: flex;
@@ -35,6 +36,11 @@ export const Wrapper = styled.div`
         color: #fff;
         font-size: 2rem;
         margin: 0;
+    }
+
+    .level{
+        font-size: 1.5rem;
+        color: #56ccff;
     }
 
     h1{

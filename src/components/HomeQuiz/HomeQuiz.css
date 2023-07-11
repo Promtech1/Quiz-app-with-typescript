@@ -1,0 +1,88 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    background-image: url(../../images/background4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-container-wrapper{
+    width: 90%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2em;
+    margin-bottom: 10em;
+}
+
+.logo img{
+    width: 6cqmin;
+    height: 100%;
+}
+
+.logo h1{
+    color: #01C734;
+    font-size: 3rem;
+    filter: drop-shadow(2px 2px #1d1e1f);
+}
+
+.lets-play{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+.lets-play h1{
+    font-size: 2.5rem;
+    color: #5200FF;
+}
+
+.lets-play span{
+    font-size: 2rem;
+    color: #01C734;
+}
+
+.play-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+}
+
+.play-button button{
+    width: 200px;
+    height: 50px;
+    border-radius: 2em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.play-button .play{
+    background-color: #5200FF;
+    color: white;
+}
+
+.play-button .about{
+    color: white;
+    background-color: transparent;
+    border: 1px solid #5200FF;
+}
